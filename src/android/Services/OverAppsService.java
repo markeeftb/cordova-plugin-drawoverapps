@@ -85,12 +85,13 @@ import java.util.Date;
                  // stopSelf();
                  try {
                      if (overAppsView != null) windowManager.removeView(overAppsView);
-                     if (overAppsHead == null) 
+/*                     if (overAppsHead == null) 
 		     {
 			windowManager.addView(overAppsHead, params_head_float);
 			showKeyDispatureVisibilty(false);     
 		     }
-                 }catch (Exception e){
+*/
+		}catch (Exception e){
                      e.printStackTrace();
                  }
              }
@@ -136,8 +137,8 @@ import java.util.Date;
                      if (gestureDetector.onTouchEvent(event)) {
                          // ....  click on the whole over app head event
                          Log.d("TAG","Click");
-                         windowManager.removeView(overAppsHead);
-                         overAppsHead = null;
+                         //windowManager.removeView(overAppsHead);
+                         //overAppsHead = null;
                          windowManager.addView(overAppsView, params_head_view);
                          showKeyDispatureVisibilty(enable_hardware_back);
                          Log.d("TAG","Click");
