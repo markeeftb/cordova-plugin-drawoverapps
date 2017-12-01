@@ -53,8 +53,8 @@ import java.util.Date;
      ImageView imageHead;
      ServiceParameters serviceParameters;
      private GestureDetector gestureDetector;
-     int ww;
-     ww=0;
+     private int ww;
+     
 
 
      @Override
@@ -147,7 +147,7 @@ import java.util.Date;
                          
 				 windowManager.addView(overAppsView, params_head_view);
 	                         showKeyDispatureVisibilty(enable_hardware_back);
-				 ww=1;
+				 ww = 1;
 			 	
                      }else {
                          switch (event.getAction()) {
