@@ -88,7 +88,7 @@ import java.util.Date;
                  try {
                      //if (overAppsView != null) windowManager.removeView(overAppsView);
 			 
-		     if (overAppsView != null) overAppsView.setVisibility(View.GONE);			 
+		     if (overAppsView != null) overAppsView.setVisibility(View.INVISIBLE);			 
 			 
 /*                     if (overAppsHead == null) 
 		     {
@@ -271,7 +271,7 @@ import java.util.Date;
      public void webViewSettings() {
 
                webView.setBackgroundColor(Color.TRANSPARENT);
-			         webView.addJavascriptInterface(new WebAppInterface(this), "OverApps");
+	       webView.addJavascriptInterface(new WebAppInterface(this), "OverApps");
                WebSettings webSettings = webView.getSettings();
                webSettings.setJavaScriptEnabled(true);
                webSettings.setAppCacheMaxSize(10 * 1024 * 1024); // 10MB
