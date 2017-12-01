@@ -84,7 +84,10 @@ import java.util.Date;
              public void onClick(View view) {
                  // stopSelf();
                  try {
-                     if (overAppsView != null) windowManager.removeView(overAppsView);
+                     //if (overAppsView != null) windowManager.removeView(overAppsView);
+			 
+		     if (overAppsView != null) overAppsView.setVisibility(View.GONE);			 
+			 
 /*                     if (overAppsHead == null) 
 		     {
 			windowManager.addView(overAppsHead, params_head_float);
