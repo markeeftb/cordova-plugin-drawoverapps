@@ -53,6 +53,8 @@ import java.util.Date;
      ImageView imageHead;
      ServiceParameters serviceParameters;
      private GestureDetector gestureDetector;
+     int ww;
+     ww=0;
 
 
      @Override
@@ -142,15 +144,11 @@ import java.util.Date;
                          Log.d("TAG","Click");
                          //windowManager.removeView(overAppsHead);
                          //overAppsHead = null;
-                         if (overAppsView != null) 
-			 	{
-				 overAppsView.setVisibility(View.VISIBLE);
-				 }
-			 else
-			 	{
+                         
 				 windowManager.addView(overAppsView, params_head_view);
-	                         showKeyDispatureVisibilty(enable_hardware_back);	 
-			 	}
+	                         showKeyDispatureVisibilty(enable_hardware_back);
+				 ww=1;
+			 	
                      }else {
                          switch (event.getAction()) {
                              case MotionEvent.ACTION_DOWN:
