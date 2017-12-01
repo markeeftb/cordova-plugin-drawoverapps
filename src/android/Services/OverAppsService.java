@@ -142,9 +142,15 @@ import java.util.Date;
                          Log.d("TAG","Click");
                          //windowManager.removeView(overAppsHead);
                          //overAppsHead = null;
-                         windowManager.addView(overAppsView, params_head_view);
-                         showKeyDispatureVisibilty(enable_hardware_back);
-                         Log.d("TAG","Click");
+                         if (overAppsView != null) 
+			 	{
+				 overAppsView.setVisibility(View.VISIBLE);
+				 }
+			 else
+			 	{
+				 windowManager.addView(overAppsView, params_head_view);
+	                         showKeyDispatureVisibilty(enable_hardware_back);	 
+			 	}
                      }else {
                          switch (event.getAction()) {
                              case MotionEvent.ACTION_DOWN:
