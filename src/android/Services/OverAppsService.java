@@ -85,7 +85,7 @@ import java.util.Date;
                  stopSelf();
                  try {
                      if (overAppsView != null) windowManager.removeView(overAppsView);
-                     if (overAppsHead != null) windowManager.removeView(overAppsHead);
+                     // if (overAppsHead != null) windowManager.removeView(overAppsHead);
                  }catch (Exception e){
                      e.printStackTrace();
                  }
