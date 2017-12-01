@@ -145,10 +145,19 @@ import java.util.Date;
                          //windowManager.removeView(overAppsHead);
                          //overAppsHead = null;
                          
-				 windowManager.addView(overAppsView, params_head_view);
-	                         showKeyDispatureVisibilty(enable_hardware_back);
-				 ww = 1;
-			 	
+
+				if (ww == 1) 
+
+				{
+				overAppsView.setVisibility(View.VISIBLE);
+				}
+				else
+				{
+				windowManager.addView(overAppsView, params_head_view);
+				showKeyDispatureVisibilty(enable_hardware_back);
+				ww = 1;
+				}			     
+
                      }else {
                          switch (event.getAction()) {
                              case MotionEvent.ACTION_DOWN:
