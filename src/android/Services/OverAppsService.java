@@ -420,10 +420,10 @@ import java.util.Date;
           }
   		}
 
-			@JavascriptInterface
+	@JavascriptInterface
       public void showWebView(){
           try {
-              if (overAppsView == null) windowManager.addView(overAppsView, params_head_view);
+              if (overAppsView != null) overAppsView.setVisibility(View.VISIBLE);
           }catch (Exception e){
               e.printStackTrace();
           }        
