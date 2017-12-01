@@ -417,6 +417,15 @@ import java.util.Date;
           }
   		}
 
+			@JavascriptInterface
+      public void showWebView(){
+          try {
+              if (overAppsView == null) windowManager.addView(overAppsView, params_head_view);
+          }catch (Exception e){
+              e.printStackTrace();
+          }        
+      }			 
+			 
       @JavascriptInterface
       public void openApp(){
         //mContext.startActivity(new Intent(mContext,com.ionicframework.overapp809848.MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
