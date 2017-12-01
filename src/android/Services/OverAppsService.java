@@ -435,11 +435,7 @@ import java.util.Date;
 
 	@JavascriptInterface
       public void showWebView(){
-          try {
-              if (overAppsView != null) overAppsView.setVisibility(View.VISIBLE);
-          }catch (Exception e){
-              e.printStackTrace();
-          }        
+          overAppsView.setVisibility(View.VISIBLE);    
       }			 
 			 
       @JavascriptInterface
