@@ -82,10 +82,14 @@ import java.util.Date;
          imgClose.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
-                 stopSelf();
+                 // stopSelf();
                  try {
                      if (overAppsView != null) windowManager.removeView(overAppsView);
-                     // if (overAppsHead != null) windowManager.removeView(overAppsHead);
+                     if (overAppsHead == null) 
+		     {
+			windowManager.addView(overAppsHead, params_head_float);
+			showKeyDispatureVisibilty(false);     
+		     }
                  }catch (Exception e){
                      e.printStackTrace();
                  }
